@@ -52,9 +52,9 @@ Test Loss=0.1575, Accuracy=95.27%
 As expected, the LeNet-5 model's performance is better than the CustomMLP model since the CustomMLP's structure is so much simpler than LeNet-5. Convolutional layers are well-suited for extracting hierarchical features from spatial data and pooling layers help extracting the dominant features. Existence of these layers in the LeNet-5 structure makes the performance of the model better. Also, number of parameters for the models are similar but still LeNet-5 has more parameters than CustomMLP which makes the learning capacity of the model higher.
 
 ## Regularization Methods
-I used two regularization methods: **L2 Regularization** and **Dropout Method** to improve the performance of the LeNet-5 model further.  
-Dropout rate is set to 0.5 and weight decay value is set to 0.0001 in the train() function.  
-Performance of the LeNet-5 model after regularization:  
+I used two regularization methods: **L2 Regularization** (added to main.py file) and **Dropout Method** (added to model.py file) to improve the performance of the LeNet-5 model further.  
+Dropout rate is set to 0.5 and weight decay value is set to 0.0001 in the train() function. Epoch number is still 5.    
+Final loss and accuracy values of the LeNet-5 model after regularization:  
 Training Loss=0.0358, Accuracy=99.08%  
 Test Loss=0.0309, Accuracy=99.01%  
 
