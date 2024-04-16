@@ -24,5 +24,27 @@ Number of parameters = (120 x 84) + 84 = 10164
 Third fully connected layer: Input features = 84, Output features = 10 (for 10 classes)  
 Number of parameters = (84 x 10) + 10 = 850  
 
-Total Parameters for LeNet-5:  
+**Total Parameters for LeNet-5:**  
 156 (conv1) + 2416 (conv2) + 3080 (fc1) + 10164 (fc2) + 850 (fc3) = 17166 parameters  
+
+## Number of Parameters for the CustomMLP model
+For the CustomMLP model, there are two fully connected layers.  
+We calculate the number of parameters for the fully connected layers with this formula: (input_features x output_features) + bias  
+
+First fully connected layer: Input features = 28 x 28 (size of the input image), Output features = 20  
+Number of parameters = (28 x 28 x 20) + 20 = 15620    
+
+Second fully connected layer: Input features = 20, Output features = 10 (for 10 classes)  
+Number of parameters = (20 x 10) + 10 = 210    
+
+**Total Parameters for CustomMLP:**  
+15620 (fc1) + 210 (fc2) = 15830 parameters  
+
+## Models' Performance
+<img width="1014" alt="Ekran Resmi 2024-04-16 ÖS 5 01 22" src="https://github.com/beyzakebeli/MNIST_classification/assets/92715108/0f236728-7246-4ee1-b6b6-0a20e5439ffc">
+
+
+
+## Regularization Methods
+I used two regularization methods: **L2 Regularization** and **Dropout Method** to improve the performance of the LeNet-5 model further.  
+
