@@ -41,10 +41,20 @@ Number of parameters = (20 x 10) + 10 = 210
 15620 (fc1) + 210 (fc2) = 15830 parameters  
 
 ## Models' Performance
+Two models' performance (without applying any regularization techniques) can be seen in the following graphs. Graphs show the training and test accuracy and loss values through 5 epochs.
+Final values for loss and accuracy for the LeNet-5 model:  
+Training Loss=0.0301, Accuracy=99.06%  
+Test Loss=0.0363, Accuracy=98.78%  
+Final values for loss and accuracy for the CustomMLP model:  
+Training Loss=0.1362, Accuracy=96.00%  
+Test Loss=0.1575, Accuracy=95.27%  
 <img width="1014" alt="Ekran Resmi 2024-04-16 ÖS 5 01 22" src="https://github.com/beyzakebeli/MNIST_classification/assets/92715108/0f236728-7246-4ee1-b6b6-0a20e5439ffc">
-
-
+As expected, the LeNet-5 model's performance is better than the CustomMLP model since the CustomMLP's structure is so much simpler than LeNet-5. Convolutional layers are well-suited for extracting hierarchical features from spatial data and pooling layers help extracting the dominant features. Existence of these layers in the LeNet-5 structure makes the performance of the model better. Also, number of parameters for the models are similar but still LeNet-5 has more parameters than CustomMLP which makes the learning capacity of the model higher.
 
 ## Regularization Methods
 I used two regularization methods: **L2 Regularization** and **Dropout Method** to improve the performance of the LeNet-5 model further.  
+Dropout rate is set to 0.5 and weight decay value is set to 0.0001 in the train() function.  
+Performance of the LeNet-5 model after regularization:  
+Training Loss=0.0358, Accuracy=99.08%  
+Test Loss=0.0309, Accuracy=99.01%  
 
